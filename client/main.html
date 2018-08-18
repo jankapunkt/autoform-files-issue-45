@@ -1,0 +1,17 @@
+<head>
+    <title>autoform-files-error</title>
+</head>
+
+<body>
+<h1>Autoform Files Repro</h1>
+
+{{> hello}}
+</body>
+
+<template name="hello">
+    {{#if ready}}
+        {{> quickForm id="uploadForm" schema=schema }}
+    {{else}}
+        <p>Loading files...</p>
+    {{/if}}
+</template>
